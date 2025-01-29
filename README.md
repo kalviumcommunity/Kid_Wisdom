@@ -1,6 +1,6 @@
 # Funny Things Kids Say 🎉
 
-## 📌 Project Idea
+## 📌 Project Idea:
 A platform where users can **log in, share funny quotes from kids, upvote the funniest ones, and view personalized lists of quotes**.
 
 ## 🔥 Features
@@ -14,4 +14,4 @@ A platform where users can **log in, share funny quotes from kids, upvote the fu
 - **Frontend**: React.js
 - **Backend**: Node.js & Express
 - **Database**: MongoDB
-- **Authentication**: Firebase Auth
+
