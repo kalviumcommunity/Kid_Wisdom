@@ -1,0 +1,19 @@
+{
+  "name": "asap",
+  "version": "1.0.0",
+  "description": "## 📌 Project Idea: A platform where users can **log in, share funny quotes from kids, upvote the funniest ones, and view personalized lists of quotes**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalviumcommunity/Kid_Wisdom.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kalviumcommunity/Kid_Wisdom/issues"
+  },
+  "homepage": "https://github.com/kalviumcommunity/Kid_Wisdom#readme"
+}
