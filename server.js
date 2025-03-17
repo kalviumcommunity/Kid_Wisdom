@@ -1,12 +1,30 @@
+require('dotenv').config();
 const express = require('express');
+const { MongoClient } = require('mongodb');
+
 const app = express();
+const port = 3000;
 
-const PORT = 4000;
+const client = new MongoClient(process.env.MONGO_URI);
 
-app.get('/ping', (req,res) =>{
-    res.send("Hello World");
-})
+async function connectDB() {
+  try {
+    await client.connect();
+    console.log("Connected to MongoDB");
+    return "Connected to MongoDB";
+  } catch (error) {
+    console.error("MongoDB connection failed:", error);
+    return "MongoDB connection failed";
+  }
+}
 
-app.listen(PORT, () =>{
-    console.log(`Server running at http://localhost:${PORT}`);
-})
+// Home route to show DB connection status
+app.get('/', async (req, res) => {
+  const status = await connectDB();
+  res.send({ dbStatus: status });
+});
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
+});
