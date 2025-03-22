@@ -5,6 +5,9 @@ const { MongoClient } = require('mongodb');
 const app = express();
 const port = 3000;
 
+app.use(express.json()); // Middleware to parse JSON
+app.use(require('./routes')); // Import routes
+
 const client = new MongoClient(process.env.MONGO_URI);
 
 async function connectDB() {
