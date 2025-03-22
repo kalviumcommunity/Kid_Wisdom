@@ -21,7 +21,6 @@ async function connectDB() {
   }
 }
 
-
 // Home route to show DB connection status
 app.get('/', async (req, res) => {
   const status = await connectDB();
