@@ -21,3 +21,26 @@ export default function App() {
     </div>
   );
 }
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import KidQuote from "./components/KidQuote";
+import AddQuote from "./pages/AddQuote"; // Import new page
+
+export default function App() {
+  return (
+    <Router>
+      <div style={{ textAlign: "center", padding: "20px" }}>
+        <h1>Welcome to Funny Things Kids Say!</h1>
+        <p>A platform to share and enjoy hilarious kid quotes.</p>
+        
+        <nav>
+          <Link to="/">Home</Link> | <Link to="/add-quote">Add Quote</Link>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<KidQuote />} />
+          <Route path="/add-quote" element={<AddQuote />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
